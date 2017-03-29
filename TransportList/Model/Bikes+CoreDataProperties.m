@@ -1,8 +1,8 @@
 //
-//  BikesProperties.m
+//  Bikes+CoreDataProperties.m
 //  TransportList
 //
-//  Created by Сергей on 29.03.17.
+//  Created by Renat Gafarov on 29/03/2017.
 //  Copyright © 2017 Сергей. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 @implementation Bikes (CoreDataProperties)
 
 + (NSFetchRequest<Bikes *> *)fetchRequest {
-    return [[NSFetchRequest alloc] initWithEntityName:@"Bikes"];
+	return [[NSFetchRequest alloc] initWithEntityName:@"Bikes"];
 }
 
 @dynamic type;

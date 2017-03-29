@@ -1,12 +1,12 @@
 //
-//  Cars.m
+//  Cars+CoreDataClass.m
 //  TransportList
 //
-//  Created by Сергей on 29.03.17.
+//  Created by Renat Gafarov on 29/03/2017.
 //  Copyright © 2017 Сергей. All rights reserved.
 //
 
-#import "Cars.h"
+#import "Cars+CoreDataClass.h"
 
 @implementation Cars
 

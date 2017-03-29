@@ -1,16 +1,20 @@
 //
-//  Transport.h
+//  Transport+CoreDataClass.h
 //  TransportList
 //
-//  Created by Сергей on 29.03.17.
+//  Created by Renat Gafarov on 29/03/2017.
 //  Copyright © 2017 Сергей. All rights reserved.
 //
 
-#import <CoreData/CoreData.h>
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface Transport : NSManagedObject
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #import "Transport+CoreDataProperties.h"

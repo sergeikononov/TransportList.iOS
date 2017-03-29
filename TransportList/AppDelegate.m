@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "PersistentContainerProvider.h"
-#import "Bikes.h"
 
 @interface AppDelegate ()
 
@@ -19,20 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    PersistentContainerProvider *container = [[PersistentContainerProvider alloc] init];
-    
-    Bikes *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Bikes" inManagedObjectContext:[self managedObjectContext];
-    
-//    NSManagedObjectModel *byy = [NSManagedObjectModel mergedModelFromBundles:nil];
-//    container = [NSPersistentContainer persistentContainerWithName:name managedObjectModel:byy];
-//    
-//    Bikes *bikes = [[Bikes alloc] init];
-//    bikes.company = @"asd";
-//    bikes.model = @"sadas";
-//    bikes.power = @200;
-//    bikes.type = @"gdsf";
-    
-    
+//    PersistentContainerProvider *container = [[PersistentContainerProvider alloc] init];
     
     
     // Override point for customization after application launch.

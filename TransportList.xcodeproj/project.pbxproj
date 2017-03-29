@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20779D6C1E8BC933009EF37D /* Trucks+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D5D1E8BC933009EF37D /* Trucks+CoreDataClass.m */; };
+		20779D6D1E8BC933009EF37D /* Trucks+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D5F1E8BC933009EF37D /* Trucks+CoreDataProperties.m */; };
+		20779D6E1E8BC933009EF37D /* Bikes+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D611E8BC933009EF37D /* Bikes+CoreDataClass.m */; };
+		20779D6F1E8BC933009EF37D /* Bikes+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D631E8BC933009EF37D /* Bikes+CoreDataProperties.m */; };
+		20779D701E8BC933009EF37D /* Transport+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D651E8BC933009EF37D /* Transport+CoreDataClass.m */; };
+		20779D711E8BC933009EF37D /* Transport+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D671E8BC933009EF37D /* Transport+CoreDataProperties.m */; };
+		20779D721E8BC933009EF37D /* Cars+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D691E8BC933009EF37D /* Cars+CoreDataClass.m */; };
+		20779D731E8BC933009EF37D /* Cars+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D6B1E8BC933009EF37D /* Cars+CoreDataProperties.m */; };
 		85AE35A41E8A778600A2901B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A31E8A778600A2901B /* main.m */; };
 		85AE35A71E8A778600A2901B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A61E8A778600A2901B /* AppDelegate.m */; };
 		85AE35AA1E8A778600A2901B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A91E8A778600A2901B /* ViewController.m */; };
@@ -16,17 +24,25 @@
 		85AE36331E8A823300A2901B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AE36321E8A823300A2901B /* CoreData.framework */; };
 		85AE363B1E8A856E00A2901B /* PersistentContainerProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE363A1E8A856E00A2901B /* PersistentContainerProvider.m */; };
 		85AE363F1E8BADE100A2901B /* TransportList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85AE363D1E8BADE100A2901B /* TransportList.xcdatamodeld */; };
-		85AE36661E8BBE4A00A2901B /* Transport.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE36651E8BBE4A00A2901B /* Transport.m */; };
-		85AE36691E8BBEFA00A2901B /* Transport+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE36681E8BBEFA00A2901B /* Transport+CoreDataProperties.m */; };
-		85AE366C1E8BC05400A2901B /* Cars.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE366B1E8BC05400A2901B /* Cars.m */; };
-		85AE366F1E8BC09D00A2901B /* Cars+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE366E1E8BC09D00A2901B /* Cars+CoreDataProperties.m */; };
-		85AE36721E8BC17500A2901B /* Truck.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE36711E8BC17500A2901B /* Truck.m */; };
-		85AE36751E8BC19100A2901B /* Truck+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE36741E8BC19100A2901B /* Truck+CoreDataProperties.m */; };
-		85AE36781E8BC2DC00A2901B /* Bikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE36771E8BC2DC00A2901B /* Bikes.m */; };
-		85AE367B1E8BC2FF00A2901B /* Bikes+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE367A1E8BC2FF00A2901B /* Bikes+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20779D5C1E8BC933009EF37D /* Trucks+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Trucks+CoreDataClass.h"; sourceTree = "<group>"; };
+		20779D5D1E8BC933009EF37D /* Trucks+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Trucks+CoreDataClass.m"; sourceTree = "<group>"; };
+		20779D5E1E8BC933009EF37D /* Trucks+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Trucks+CoreDataProperties.h"; sourceTree = "<group>"; };
+		20779D5F1E8BC933009EF37D /* Trucks+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Trucks+CoreDataProperties.m"; sourceTree = "<group>"; };
+		20779D601E8BC933009EF37D /* Bikes+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bikes+CoreDataClass.h"; sourceTree = "<group>"; };
+		20779D611E8BC933009EF37D /* Bikes+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Bikes+CoreDataClass.m"; sourceTree = "<group>"; };
+		20779D621E8BC933009EF37D /* Bikes+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bikes+CoreDataProperties.h"; sourceTree = "<group>"; };
+		20779D631E8BC933009EF37D /* Bikes+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Bikes+CoreDataProperties.m"; sourceTree = "<group>"; };
+		20779D641E8BC933009EF37D /* Transport+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transport+CoreDataClass.h"; sourceTree = "<group>"; };
+		20779D651E8BC933009EF37D /* Transport+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transport+CoreDataClass.m"; sourceTree = "<group>"; };
+		20779D661E8BC933009EF37D /* Transport+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transport+CoreDataProperties.h"; sourceTree = "<group>"; };
+		20779D671E8BC933009EF37D /* Transport+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transport+CoreDataProperties.m"; sourceTree = "<group>"; };
+		20779D681E8BC933009EF37D /* Cars+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cars+CoreDataClass.h"; sourceTree = "<group>"; };
+		20779D691E8BC933009EF37D /* Cars+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cars+CoreDataClass.m"; sourceTree = "<group>"; };
+		20779D6A1E8BC933009EF37D /* Cars+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cars+CoreDataProperties.h"; sourceTree = "<group>"; };
+		20779D6B1E8BC933009EF37D /* Cars+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cars+CoreDataProperties.m"; sourceTree = "<group>"; };
 		85AE359F1E8A778600A2901B /* TransportList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransportList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AE35A31E8A778600A2901B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85AE35A51E8A778600A2901B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,22 +57,6 @@
 		85AE36391E8A856E00A2901B /* PersistentContainerProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistentContainerProvider.h; sourceTree = "<group>"; };
 		85AE363A1E8A856E00A2901B /* PersistentContainerProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistentContainerProvider.m; sourceTree = "<group>"; };
 		85AE363E1E8BADE100A2901B /* TransportList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransportList.xcdatamodel; sourceTree = "<group>"; };
-		85AE36641E8BBE4A00A2901B /* Transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transport.h; sourceTree = "<group>"; };
-		85AE36651E8BBE4A00A2901B /* Transport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transport.m; sourceTree = "<group>"; };
-		85AE36671E8BBEFA00A2901B /* Transport+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transport+CoreDataProperties.h"; sourceTree = "<group>"; };
-		85AE36681E8BBEFA00A2901B /* Transport+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transport+CoreDataProperties.m"; sourceTree = "<group>"; };
-		85AE366A1E8BC05400A2901B /* Cars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cars.h; sourceTree = "<group>"; };
-		85AE366B1E8BC05400A2901B /* Cars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cars.m; sourceTree = "<group>"; };
-		85AE366D1E8BC09D00A2901B /* Cars+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cars+CoreDataProperties.h"; sourceTree = "<group>"; };
-		85AE366E1E8BC09D00A2901B /* Cars+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cars+CoreDataProperties.m"; sourceTree = "<group>"; };
-		85AE36701E8BC17500A2901B /* Truck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Truck.h; sourceTree = "<group>"; };
-		85AE36711E8BC17500A2901B /* Truck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Truck.m; sourceTree = "<group>"; };
-		85AE36731E8BC19100A2901B /* Truck+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Truck+CoreDataProperties.h"; sourceTree = "<group>"; };
-		85AE36741E8BC19100A2901B /* Truck+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Truck+CoreDataProperties.m"; sourceTree = "<group>"; };
-		85AE36761E8BC2DC00A2901B /* Bikes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bikes.h; sourceTree = "<group>"; };
-		85AE36771E8BC2DC00A2901B /* Bikes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bikes.m; sourceTree = "<group>"; };
-		85AE36791E8BC2FF00A2901B /* Bikes+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bikes+CoreDataProperties.h"; sourceTree = "<group>"; };
-		85AE367A1E8BC2FF00A2901B /* Bikes+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Bikes+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,26 +125,26 @@
 		85AE363C1E8BAC3000A2901B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				20779D5C1E8BC933009EF37D /* Trucks+CoreDataClass.h */,
+				20779D5D1E8BC933009EF37D /* Trucks+CoreDataClass.m */,
+				20779D5E1E8BC933009EF37D /* Trucks+CoreDataProperties.h */,
+				20779D5F1E8BC933009EF37D /* Trucks+CoreDataProperties.m */,
+				20779D601E8BC933009EF37D /* Bikes+CoreDataClass.h */,
+				20779D611E8BC933009EF37D /* Bikes+CoreDataClass.m */,
+				20779D621E8BC933009EF37D /* Bikes+CoreDataProperties.h */,
+				20779D631E8BC933009EF37D /* Bikes+CoreDataProperties.m */,
+				20779D641E8BC933009EF37D /* Transport+CoreDataClass.h */,
+				20779D651E8BC933009EF37D /* Transport+CoreDataClass.m */,
+				20779D661E8BC933009EF37D /* Transport+CoreDataProperties.h */,
+				20779D671E8BC933009EF37D /* Transport+CoreDataProperties.m */,
+				20779D681E8BC933009EF37D /* Cars+CoreDataClass.h */,
+				20779D691E8BC933009EF37D /* Cars+CoreDataClass.m */,
+				20779D6A1E8BC933009EF37D /* Cars+CoreDataProperties.h */,
+				20779D6B1E8BC933009EF37D /* Cars+CoreDataProperties.m */,
 				85AE36391E8A856E00A2901B /* PersistentContainerProvider.h */,
 				85AE363A1E8A856E00A2901B /* PersistentContainerProvider.m */,
-				85AE36641E8BBE4A00A2901B /* Transport.h */,
-				85AE36651E8BBE4A00A2901B /* Transport.m */,
-				85AE36671E8BBEFA00A2901B /* Transport+CoreDataProperties.h */,
-				85AE36681E8BBEFA00A2901B /* Transport+CoreDataProperties.m */,
-				85AE366A1E8BC05400A2901B /* Cars.h */,
-				85AE366B1E8BC05400A2901B /* Cars.m */,
-				85AE366D1E8BC09D00A2901B /* Cars+CoreDataProperties.h */,
-				85AE366E1E8BC09D00A2901B /* Cars+CoreDataProperties.m */,
-				85AE36701E8BC17500A2901B /* Truck.h */,
-				85AE36711E8BC17500A2901B /* Truck.m */,
-				85AE36731E8BC19100A2901B /* Truck+CoreDataProperties.h */,
-				85AE36741E8BC19100A2901B /* Truck+CoreDataProperties.m */,
-				85AE36761E8BC2DC00A2901B /* Bikes.h */,
-				85AE36771E8BC2DC00A2901B /* Bikes.m */,
-				85AE36791E8BC2FF00A2901B /* Bikes+CoreDataProperties.h */,
-				85AE367A1E8BC2FF00A2901B /* Bikes+CoreDataProperties.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,19 +219,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85AE36781E8BC2DC00A2901B /* Bikes.m in Sources */,
-				85AE36691E8BBEFA00A2901B /* Transport+CoreDataProperties.m in Sources */,
+				20779D6D1E8BC933009EF37D /* Trucks+CoreDataProperties.m in Sources */,
+				20779D711E8BC933009EF37D /* Transport+CoreDataProperties.m in Sources */,
 				85AE35AA1E8A778600A2901B /* ViewController.m in Sources */,
-				85AE366C1E8BC05400A2901B /* Cars.m in Sources */,
-				85AE36721E8BC17500A2901B /* Truck.m in Sources */,
-				85AE367B1E8BC2FF00A2901B /* Bikes+CoreDataProperties.m in Sources */,
+				20779D6E1E8BC933009EF37D /* Bikes+CoreDataClass.m in Sources */,
+				20779D721E8BC933009EF37D /* Cars+CoreDataClass.m in Sources */,
 				85AE35A71E8A778600A2901B /* AppDelegate.m in Sources */,
-				85AE366F1E8BC09D00A2901B /* Cars+CoreDataProperties.m in Sources */,
-				85AE36751E8BC19100A2901B /* Truck+CoreDataProperties.m in Sources */,
 				85AE363B1E8A856E00A2901B /* PersistentContainerProvider.m in Sources */,
-				85AE36661E8BBE4A00A2901B /* Transport.m in Sources */,
+				20779D6F1E8BC933009EF37D /* Bikes+CoreDataProperties.m in Sources */,
 				85AE363F1E8BADE100A2901B /* TransportList.xcdatamodeld in Sources */,
 				85AE35A41E8A778600A2901B /* main.m in Sources */,
+				20779D6C1E8BC933009EF37D /* Trucks+CoreDataClass.m in Sources */,
+				20779D701E8BC933009EF37D /* Transport+CoreDataClass.m in Sources */,
+				20779D731E8BC933009EF37D /* Cars+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
