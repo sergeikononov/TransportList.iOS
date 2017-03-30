@@ -24,6 +24,10 @@
 		85AE36331E8A823300A2901B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AE36321E8A823300A2901B /* CoreData.framework */; };
 		85AE363B1E8A856E00A2901B /* PersistentContainerProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE363A1E8A856E00A2901B /* PersistentContainerProvider.m */; };
 		85AE363F1E8BADE100A2901B /* TransportList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85AE363D1E8BADE100A2901B /* TransportList.xcdatamodeld */; };
+		85D53E3E1E8CF05D00EE8475 /* TransportAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D53E3D1E8CF05D00EE8475 /* TransportAPIClient.m */; };
+		85D53E471E8CF85900EE8475 /* RequestProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D53E461E8CF85900EE8475 /* RequestProvider.m */; };
+		85D53E4D1E8D027E00EE8475 /* ResponseDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D53E4C1E8D027E00EE8475 /* ResponseDeserializer.m */; };
+		85D53E501E8D09F300EE8475 /* ResponseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D53E4F1E8D09F300EE8475 /* ResponseMapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,14 @@
 		85AE36391E8A856E00A2901B /* PersistentContainerProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistentContainerProvider.h; sourceTree = "<group>"; };
 		85AE363A1E8A856E00A2901B /* PersistentContainerProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistentContainerProvider.m; sourceTree = "<group>"; };
 		85AE363E1E8BADE100A2901B /* TransportList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransportList.xcdatamodel; sourceTree = "<group>"; };
+		85D53E3C1E8CF05D00EE8475 /* TransportAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransportAPIClient.h; path = ../TransportAPIClient.h; sourceTree = "<group>"; };
+		85D53E3D1E8CF05D00EE8475 /* TransportAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransportAPIClient.m; path = ../TransportAPIClient.m; sourceTree = "<group>"; };
+		85D53E451E8CF85900EE8475 /* RequestProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestProvider.h; sourceTree = "<group>"; };
+		85D53E461E8CF85900EE8475 /* RequestProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestProvider.m; sourceTree = "<group>"; };
+		85D53E4B1E8D027E00EE8475 /* ResponseDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseDeserializer.h; sourceTree = "<group>"; };
+		85D53E4C1E8D027E00EE8475 /* ResponseDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseDeserializer.m; sourceTree = "<group>"; };
+		85D53E4E1E8D09F300EE8475 /* ResponseMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseMapper.h; sourceTree = "<group>"; };
+		85D53E4F1E8D09F300EE8475 /* ResponseMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseMapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +120,16 @@
 		85AE35A21E8A778600A2901B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				85D53E3C1E8CF05D00EE8475 /* TransportAPIClient.h */,
+				85D53E3D1E8CF05D00EE8475 /* TransportAPIClient.m */,
 				85AE363D1E8BADE100A2901B /* TransportList.xcdatamodeld */,
 				85AE35A31E8A778600A2901B /* main.m */,
+				85D53E451E8CF85900EE8475 /* RequestProvider.h */,
+				85D53E461E8CF85900EE8475 /* RequestProvider.m */,
+				85D53E4B1E8D027E00EE8475 /* ResponseDeserializer.h */,
+				85D53E4C1E8D027E00EE8475 /* ResponseDeserializer.m */,
+				85D53E4E1E8D09F300EE8475 /* ResponseMapper.h */,
+				85D53E4F1E8D09F300EE8475 /* ResponseMapper.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -222,11 +242,15 @@
 				20779D6D1E8BC933009EF37D /* Trucks+CoreDataProperties.m in Sources */,
 				20779D711E8BC933009EF37D /* Transport+CoreDataProperties.m in Sources */,
 				85AE35AA1E8A778600A2901B /* ViewController.m in Sources */,
+				85D53E4D1E8D027E00EE8475 /* ResponseDeserializer.m in Sources */,
 				20779D6E1E8BC933009EF37D /* Bikes+CoreDataClass.m in Sources */,
 				20779D721E8BC933009EF37D /* Cars+CoreDataClass.m in Sources */,
 				85AE35A71E8A778600A2901B /* AppDelegate.m in Sources */,
 				85AE363B1E8A856E00A2901B /* PersistentContainerProvider.m in Sources */,
+				85D53E471E8CF85900EE8475 /* RequestProvider.m in Sources */,
+				85D53E3E1E8CF05D00EE8475 /* TransportAPIClient.m in Sources */,
 				20779D6F1E8BC933009EF37D /* Bikes+CoreDataProperties.m in Sources */,
+				85D53E501E8D09F300EE8475 /* ResponseMapper.m in Sources */,
 				85AE363F1E8BADE100A2901B /* TransportList.xcdatamodeld in Sources */,
 				85AE35A41E8A778600A2901B /* main.m in Sources */,
 				20779D6C1E8BC933009EF37D /* Trucks+CoreDataClass.m in Sources */,

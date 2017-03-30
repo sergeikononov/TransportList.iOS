@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "PersistentContainerProvider.h"
+#import "Bikes+CoreDataClass.h"
+#import "TransportAPIClient.h"
 
 @interface AppDelegate ()
 
@@ -15,11 +17,31 @@
 
 @implementation AppDelegate
 
+//TODO: Первая инициализация синглтона ПерситентПровайдер и загрука хранилища с обработкой ошибки (abort).
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    PersistentContainerProvider *container = [[PersistentContainerProvider alloc] init];
+    PersistentContainerProvider *container = [[PersistentContainerProvider alloc] init];
     
+//    Bikes *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Bikes" inManagedObjectContext:container.persistentContainer.viewContext];
+//    
+//    
+//    NSError *error = nil;
+//    if ([[employee managedObjectContext] save:&error] == NO) {
+//        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+//    }
+    
+    NSManagedObjectContext *moc = container.persistentContainer.viewContext;
+    [moc performBlock:^{
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Bikes"];
+        
+        NSError *error = nil;
+        NSArray *results = [moc executeFetchRequest:request error:&error];
+        if (!results) {
+            NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
+            abort();
+        }
+    }];
     
     // Override point for customization after application launch.
     

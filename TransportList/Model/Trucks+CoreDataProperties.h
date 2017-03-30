@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Trucks *> *)fetchRequest;
 
-@property (nonatomic) double capacity;
+@property (nonatomic) NSNumber* capacity;
 @property (nullable, nonatomic, copy) NSString *helm;
 @property (nullable, nonatomic, copy) NSDecimalNumber *sittings;
 

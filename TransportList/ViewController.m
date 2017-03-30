@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "TransportAPIClient.h"
+
 
 @interface ViewController ()
+
 
 @end
 
@@ -16,6 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    TransportAPIClient *a = [[TransportAPIClient alloc] init];
+    a.fetchAllTransport;
+    
+
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

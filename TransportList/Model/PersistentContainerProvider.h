@@ -9,10 +9,22 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^PersistentContainerProviderDidLoadStoreBlock)(NSError *error);
+
 @interface PersistentContainerProvider : NSObject
+
++ (instancetype)sharedInstance; //Singleton
 
 @property (strong, nonatomic, readonly) NSPersistentContainer *persistentContainer;
 
+@property (assign, nonatomic, readonly) BOOL isLoadStore;
 
+- (void)loadStoreWithCompletion:(nonnull PersistentContainerProviderDidLoadStoreBlock)didLoadStoreBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+//TODO: Сделать синглтоном

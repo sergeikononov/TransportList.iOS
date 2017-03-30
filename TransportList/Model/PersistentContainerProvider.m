@@ -10,24 +10,26 @@
 
 @implementation PersistentContainerProvider
 
+@synthesize persistentContainer = _persistentContainer;
+
 - (id)init {
     self = [super init];
-    if (!self) return nil;
     
-    _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"TransportList"];
+    if (self) {
+        _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"TransportList"];
+    }
     
-    [self.persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *description, NSError *error) {
-        if (error != nil) {
-            NSLog(@"Failed to load Core Data stack: %@", error);
-            abort();
-        }
-        
-    }];
     return self;
 }
 
+- (void)loadStoreWithCompletion:(PersistentContainerProviderDidLoadStoreBlock)didLoadStoreBlock {
+    [self.persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *description, NSError *error) {
+        didLoadStoreBlock(error);
+    }];
+}
 
-
-
+- (NSPersistentContainer *)persistentContainer {
+    return self.isLoadStore ? _persistentContainer : nil;
+}
 
 @end
