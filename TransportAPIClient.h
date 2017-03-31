@@ -7,21 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Bikes+CoreDataClass.h"
-#import "Cars+CoreDataClass.h"
-#import "Trucks+CoreDataClass.h"
+
+#import <CoreData/CoreData.h>
+
+@class Transport;
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^TransportAPIClientFetchCompletionBlock)(NSArray <Transport *> *allTransports, NSError *error);
 
 @interface TransportAPIClient : NSObject
 
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)moc NS_DESIGNATED_INITIALIZER;
 
-
-
--(void)fetchAllTransport;
+-(void)fetchAllTransportWithCompletionBlock:(nonnull TransportAPIClientFetchCompletionBlock)completion;
 
 @end
 
-
-
-
-
-
+NS_ASSUME_NONNULL_END

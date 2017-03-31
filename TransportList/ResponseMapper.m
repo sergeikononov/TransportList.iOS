@@ -14,11 +14,10 @@
 
 @implementation ResponseMapper
 
-
-
 - (NSArray <Transport *> *)mapAllTransportFromJSON:(NSDictionary *)allTransportJSONRepresentation inManagedObjectContext:(NSManagedObjectContext *)moc {
     NSMutableArray <Transport *> *allTransports = [[NSMutableArray alloc] init];
     [moc performBlockAndWait:^{
+        // Map all cars
         NSArray <NSDictionary *> *allCarsJSONRepresentation = allTransportJSONRepresentation[@"cars"];
         for(NSDictionary *carJSONRepresentation in allCarsJSONRepresentation) {
             Cars *car = [[Cars alloc] initWithContext:moc];
@@ -30,6 +29,7 @@
             car.power = carJSONRepresentation[@"power"];
             [allTransports addObject:car];
         }
+        
         NSArray <NSDictionary *> *allBikesJSONRepresentation = allTransportJSONRepresentation[@"bikes"];
         for(NSDictionary *bikeJSONRepresentation in allBikesJSONRepresentation) {
             Bikes *bike = [[Bikes alloc] initWithContext:moc];
@@ -54,7 +54,7 @@
         }
     }];
     
-    return allTransports;
+    return [allTransports copy];
 }
 
 @end

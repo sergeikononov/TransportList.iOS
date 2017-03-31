@@ -20,27 +20,16 @@
 //TODO: Первая инициализация синглтона ПерситентПровайдер и загрука хранилища с обработкой ошибки (abort).
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    PersistentContainerProvider *container = [[PersistentContainerProvider alloc] init];
-    
-//    Bikes *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Bikes" inManagedObjectContext:container.persistentContainer.viewContext];
-//    
-//    
-//    NSError *error = nil;
-//    if ([[employee managedObjectContext] save:&error] == NO) {
-//        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
-//    }
-    
-    NSManagedObjectContext *moc = container.persistentContainer.viewContext;
-    [moc performBlock:^{
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Bikes"];
-        
-        NSError *error = nil;
-        NSArray *results = [moc executeFetchRequest:request error:&error];
-        if (!results) {
-            NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
+    PersistentContainerProvider *containerProvider = [PersistentContainerProvider sharedInstance];
+    [containerProvider loadStoreWithCompletion:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"Failed load Core Data: %@", error);
             abort();
         }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self preFillCoreDataStorage];
+        });
     }];
     
     // Override point for customization after application launch.
@@ -48,6 +37,20 @@
     return YES;
 }
 
+- (void)preFillCoreDataStorage {
+    NSManagedObjectContext *viewContext = [PersistentContainerProvider sharedInstance].persistentContainer.viewContext;
+    
+    TransportAPIClient *client = [[TransportAPIClient alloc] initWithManagedObjectContext:viewContext];
+    
+    [client fetchAllTransportWithCompletionBlock:^(NSArray <Transport *> *allTransports, NSError *error) {
+        NSLog(@"all transport = %@", allTransports);
+        NSLog(@"error = %@", error);
+        
+        [viewContext performBlock:^{
+            [viewContext save:nil];
+        }];
+    }];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

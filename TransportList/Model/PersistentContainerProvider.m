@@ -12,6 +12,17 @@
 
 @synthesize persistentContainer = _persistentContainer;
 
++ (instancetype)sharedInstance {
+    static dispatch_once_t onceToken;
+    static PersistentContainerProvider *persistentContainerProvider = nil;
+    
+    dispatch_once(&onceToken, ^{
+        persistentContainerProvider = [[self alloc] init];
+    });
+    
+    return persistentContainerProvider;
+}
+
 - (id)init {
     self = [super init];
     
@@ -23,7 +34,8 @@
 }
 
 - (void)loadStoreWithCompletion:(PersistentContainerProviderDidLoadStoreBlock)didLoadStoreBlock {
-    [self.persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *description, NSError *error) {
+    [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *description, NSError *error) {
+        if(!error) _isLoadStore = YES;
         didLoadStoreBlock(error);
     }];
 }
