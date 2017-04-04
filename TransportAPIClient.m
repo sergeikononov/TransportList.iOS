@@ -50,11 +50,11 @@
         
         NSDictionary *transportsJSONRepresentation = [self.responseDeserializer deserializeResponseData:responseData];
         
-        NSLog(@"%@ ", transportsJSONRepresentation);
+//        NSLog(@"%@ ", transportsJSONRepresentation);
         
         NSArray <Transport *> *transportList = [self.responseMapper mapAllTransportFromJSON:transportsJSONRepresentation
                                                                      inManagedObjectContext:self.moc];
-        NSLog(@"%@", transportList);
+//        NSLog(@"%@", transportList);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             completion(transportList, error);

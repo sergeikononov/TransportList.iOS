@@ -15,6 +15,7 @@
 		20779D711E8BC933009EF37D /* Transport+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D671E8BC933009EF37D /* Transport+CoreDataProperties.m */; };
 		20779D721E8BC933009EF37D /* Cars+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D691E8BC933009EF37D /* Cars+CoreDataClass.m */; };
 		20779D731E8BC933009EF37D /* Cars+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D6B1E8BC933009EF37D /* Cars+CoreDataProperties.m */; };
+		857FB4131E939B0D0054AD0F /* TransportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 857FB4121E939B0D0054AD0F /* TransportTableViewCell.m */; };
 		85AE35A41E8A778600A2901B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A31E8A778600A2901B /* main.m */; };
 		85AE35A71E8A778600A2901B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A61E8A778600A2901B /* AppDelegate.m */; };
 		85AE35AA1E8A778600A2901B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A91E8A778600A2901B /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		20779D691E8BC933009EF37D /* Cars+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cars+CoreDataClass.m"; sourceTree = "<group>"; };
 		20779D6A1E8BC933009EF37D /* Cars+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cars+CoreDataProperties.h"; sourceTree = "<group>"; };
 		20779D6B1E8BC933009EF37D /* Cars+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cars+CoreDataProperties.m"; sourceTree = "<group>"; };
+		857FB4111E939B0D0054AD0F /* TransportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportTableViewCell.h; sourceTree = "<group>"; };
+		857FB4121E939B0D0054AD0F /* TransportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportTableViewCell.m; sourceTree = "<group>"; };
 		85AE359F1E8A778600A2901B /* TransportList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransportList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AE35A31E8A778600A2901B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85AE35A51E8A778600A2901B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				85AE35A61E8A778600A2901B /* AppDelegate.m */,
 				85AE35A81E8A778600A2901B /* ViewController.h */,
 				85AE35A91E8A778600A2901B /* ViewController.m */,
+				857FB4111E939B0D0054AD0F /* TransportTableViewCell.h */,
+				857FB4121E939B0D0054AD0F /* TransportTableViewCell.m */,
 				85AE35AB1E8A778600A2901B /* Main.storyboard */,
 				85AE35AE1E8A778600A2901B /* Assets.xcassets */,
 				85AE35B01E8A778600A2901B /* LaunchScreen.storyboard */,
@@ -254,6 +259,7 @@
 				85AE363F1E8BADE100A2901B /* TransportList.xcdatamodeld in Sources */,
 				85AE35A41E8A778600A2901B /* main.m in Sources */,
 				20779D6C1E8BC933009EF37D /* Trucks+CoreDataClass.m in Sources */,
+				857FB4131E939B0D0054AD0F /* TransportTableViewCell.m in Sources */,
 				20779D701E8BC933009EF37D /* Transport+CoreDataClass.m in Sources */,
 				20779D731E8BC933009EF37D /* Cars+CoreDataProperties.m in Sources */,
 			);

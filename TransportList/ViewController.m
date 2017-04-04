@@ -12,19 +12,70 @@
 
 @interface ViewController ()
 
+@property (strong,nonatomic) NSArray *items;
+
 
 @end
 
-@implementation ViewController {
-    NSArray *tableData;
-}
+@implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+    
+//    self.tableView.delegate = self;
+//    self.tableView.dataSource = self;
+    
+    
+    PersistentContainerProvider *containerProvider = [PersistentContainerProvider sharedInstance];
+    [containerProvider loadStoreWithCompletion:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"Failed load Core Data: %@", error);
+            abort();
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self preFillCoreDataStorage];
+        });
+    }];
 
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSManagedObjectContext *context = containerProvider.persistentContainer.viewContext;
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Transport"];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"model" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    self.fetchedResultsController = [[NSFetchedResultsController alloc]
+                                              initWithFetchRequest:fetchRequest
+                                              managedObjectContext:context
+                                              sectionNameKeyPath:nil
+                                              cacheName:nil];
+    NSError *error;
+    
+    self.items = [context executeFetchRequest:fetchRequest error:&error];
+//    NSLog(@"%@", objects);
+    
+        
+    
+    
 }
+
+- (void)preFillCoreDataStorage {
+    NSManagedObjectContext *viewContext = [PersistentContainerProvider sharedInstance].persistentContainer.viewContext;
+    
+    TransportAPIClient *client = [[TransportAPIClient alloc] initWithManagedObjectContext:viewContext];
+    
+    [client fetchAllTransportWithCompletionBlock:^(NSArray <Transport *> *allTransports, NSError *error) {
+//        NSLog(@"all transport = %@", allTransports);
+        NSLog(@"error = %@", error);
+        
+        [viewContext performBlock:^{
+            [viewContext save:nil];
+        }];
+    }];
+}
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -36,24 +87,48 @@
     
 };
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [tableData count];
+- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
+    if ([[_fetchedResultsController sections] count] > 0) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+        return [sectionInfo numberOfObjects];
+    } else
+        return self.items.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+        return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    TransportTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Transport" forIndexPath:indexPath];
+
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
+    cell.company.text = ((Transport*)self.items[indexPath.row]).company;
+    cell.model.text = ((Transport*)self.items[indexPath.row]).model;
     
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    
     return cell;
 }
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [_fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [_fetchedResultsController sectionIndexTitles];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if ([[_fetchedResultsController sections] count] > 0) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+        return [sectionInfo name];
+    } else
+        return nil;
+}
+
+
 
 
 @end
