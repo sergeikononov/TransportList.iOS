@@ -22,6 +22,7 @@ typedef void(^TransportAPIClientFetchCompletionBlock)(NSArray <Transport *> *all
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)moc NS_DESIGNATED_INITIALIZER;
 
 -(void)fetchAllTransportWithCompletionBlock:(nonnull TransportAPIClientFetchCompletionBlock)completion;
+@property (strong, nonatomic) NSManagedObjectContext *moc;
 
 @end
 

@@ -22,8 +22,6 @@
 @property (strong, nonatomic) ResponseDeserializer *responseDeserializer;
 @property (strong, nonatomic) ResponseMapper *responseMapper;
 
-@property (strong, nonatomic) NSManagedObjectContext *moc;
-
 @end
 
 @implementation TransportAPIClient
@@ -35,8 +33,7 @@
         _requestProvider = [RequestProvider new];
         _session = [NSURLSession sharedSession];
         _responseDeserializer = [ResponseDeserializer new];
-        _responseMapper = [ResponseMapper new];
-        
+        _responseMapper = [ResponseMapper new];        
         _moc = moc;
     }
     
@@ -50,11 +47,8 @@
         
         NSDictionary *transportsJSONRepresentation = [self.responseDeserializer deserializeResponseData:responseData];
         
-//        NSLog(@"%@ ", transportsJSONRepresentation);
-        
         NSArray <Transport *> *transportList = [self.responseMapper mapAllTransportFromJSON:transportsJSONRepresentation
                                                                      inManagedObjectContext:self.moc];
-//        NSLog(@"%@", transportList);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             completion(transportList, error);
