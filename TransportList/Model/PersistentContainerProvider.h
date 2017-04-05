@@ -22,8 +22,9 @@ typedef void(^PersistentContainerProviderDidLoadStoreBlock)(NSError *error);
 @property (assign, nonatomic, readonly) BOOL isLoadStore;
 
 - (void)loadStoreWithCompletion:(nonnull PersistentContainerProviderDidLoadStoreBlock)didLoadStoreBlock;
-- (NSManagedObjectContext *) managedObjectContext;
-- (void) downloadDataFromNetwork:(void(^_Nullable)(void))data;
+
 @end
 
 NS_ASSUME_NONNULL_END
+
+//TODO: Сделать синглтоном
