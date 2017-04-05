@@ -12,7 +12,7 @@
 
 @implementation ViewController
 
-
+//Проблема со скролингом
 - (void)viewDidLoad {
         [super viewDidLoad];
         PersistentContainerProvider *containerProvider = [PersistentContainerProvider sharedInstance];
