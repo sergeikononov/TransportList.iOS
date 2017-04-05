@@ -7,7 +7,6 @@
 //
 
 #import "PersistentContainerProvider.h"
-#import "TransportAPIClient.h"
 
 @implementation PersistentContainerProvider
 
@@ -41,35 +40,8 @@
     }];
 }
 
-- (void) downloadDataFromNetwork:(void(^_Nullable)(void))dataBlock {
-    TransportAPIClient *client = [[TransportAPIClient alloc] initWithManagedObjectContext:[self managedObjectContext]];
-    [client fetchAllTransportWithCompletionBlock:^(NSArray <Transport *> *allTransports, NSError *error) {
-        NSLog(@"error = %@", error);
-        for (NSManagedObject *item in allTransports) {
-            [client.moc insertObject:item];
-        }
-        [client.moc save:&error];
-        if (dataBlock) {
-            dataBlock();
-        }
-    }];
-    
-}
-
-- (NSManagedObjectContext *) managedObjectContext {
-    NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-    managedObjectContext.persistentStoreCoordinator = self.persistentContainer.viewContext.persistentStoreCoordinator;
-    return managedObjectContext;
-}
-
-
-- (NSPersistentContainer *) persistentContainer {
-    if (!self.isLoadStore) {
-        [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription * description, NSError * error) {
-        }];
-    }
-    _isLoadStore = YES;
-    return _persistentContainer;
+- (NSPersistentContainer *)persistentContainer {
+    return self.isLoadStore ? _persistentContainer : nil;
 }
 
 @end
