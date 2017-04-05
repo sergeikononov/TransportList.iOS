@@ -1,10 +1,3 @@
-//
-//  ViewController.m
-//  TransportList
-//
-//  Created by Сергей on 28.03.17.
-//  Copyright © 2017 Сергей. All rights reserved.
-//
 
 #import "ViewController.h"
 #import "TransportAPIClient.h"
@@ -18,79 +11,40 @@
 @end
 
 @implementation ViewController
-<<<<<<< HEAD
-//ываыв
 
-=======
 
-//Проблема со скролингом
->>>>>>> d41c17371dbceac1cbfd7fdb6b82d4c141ef6935
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-//    self.tableView.delegate = self;
-//    self.tableView.dataSource = self;
-    
-    
-    PersistentContainerProvider *containerProvider = [PersistentContainerProvider sharedInstance];
-    [containerProvider loadStoreWithCompletion:^(NSError *error) {
-        if (error != nil) {
-            NSLog(@"Failed load Core Data: %@", error);
-            abort();
+        [super viewDidLoad];
+        PersistentContainerProvider *containerProvider = [PersistentContainerProvider sharedInstance];
+        [self fetchFromCoreData];
+        if (self.items.count == 0){
+            [containerProvider downloadDataFromNetwork:^{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self fetchFromCoreData];
+                    [self.tableView reloadData];
+                });
+            }];
         }
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self preFillCoreDataStorage];
-        });
-    }];
+}
 
+
+-(void) fetchFromCoreData {
+    PersistentContainerProvider *containerProvider = [PersistentContainerProvider sharedInstance];
+    NSManagedObjectContext *context = [containerProvider managedObjectContext];
     
-    NSManagedObjectContext *context = containerProvider.persistentContainer.viewContext;
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Transport"];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"model" ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    self.fetchedResultsController = [[NSFetchedResultsController alloc]
-                                              initWithFetchRequest:fetchRequest
-                                              managedObjectContext:context
-                                              sectionNameKeyPath:nil
-                                              cacheName:nil];
-    NSError *error;
-    
-    self.items = [context executeFetchRequest:fetchRequest error:&error];
-//    NSLog(@"%@", objects);
-    
-        
-    
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Transport"];
+    self.items = [context executeFetchRequest:request error:nil];
+    [self.tableView reloadData];
     
 }
 
-- (void)preFillCoreDataStorage {
-    NSManagedObjectContext *viewContext = [PersistentContainerProvider sharedInstance].persistentContainer.viewContext;
-    
-    TransportAPIClient *client = [[TransportAPIClient alloc] initWithManagedObjectContext:viewContext];
-    
-    [client fetchAllTransportWithCompletionBlock:^(NSArray <Transport *> *allTransports, NSError *error) {
-//        NSLog(@"all transport = %@", allTransports);
-        NSLog(@"error = %@", error);
-        
-        [viewContext performBlock:^{
-            [viewContext save:nil];
-        }];
-    }];
-}
 
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-};
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
     if ([[_fetchedResultsController sections] count] > 0) {
@@ -117,20 +71,9 @@
     return cell;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    return [_fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
-}
-
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return [_fetchedResultsController sectionIndexTitles];
-}
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if ([[_fetchedResultsController sections] count] > 0) {
-        id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
-        return [sectionInfo name];
-    } else
-        return nil;
+        return @"Transports";
 }
 
 
