@@ -1,6 +1,7 @@
 
 #import "ViewController.h"
 #import "TransportAPIClient.h"
+#import "DetailViewController.h"
 
 
 @interface ViewController ()
@@ -76,6 +77,19 @@
         return @"Transports";
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    DetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([DetailViewController class])];
+    
+    viewController.transport = ((Transport*)self.items[indexPath.row]);
+    [self.navigationController pushViewController:viewController animated:YES];
+
+    
+    
+    
+    
+    
+}
 
 
 

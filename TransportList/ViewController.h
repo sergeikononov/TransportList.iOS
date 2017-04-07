@@ -5,6 +5,8 @@
 #import "PersistentContainerProvider.h"
 #import "Bikes+CoreDataClass.h"
 #import <CoreData/CoreData.h>
+#import "Cars+CoreDataClass.h"
+#import "Trucks+CoreDataClass.h"
 
 
 
