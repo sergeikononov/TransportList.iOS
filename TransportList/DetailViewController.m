@@ -86,20 +86,66 @@
                 break;
         }
     }
-//        return cell;
-//    }
-//    if([self.transport isKindOfClass:[Bikes class]]) {
-//        cell.textLabel.text = (Bikes*)self.transport.model;
-//        return cell;
-//    }
-//    if ([self.transport isKindOfClass:[Trucks class]]) {
-//        cell.textLabel.text = (Trucks*)self.transport.model;
-//        return cell;
-//    } else
-//        
-//        cell.tittle.text = @"hui";
+
+    if([self.transport isKindOfClass:[Bikes class]]) {
+        switch (indexPath.row) {
+            case 0:
+                cell.textLabel.text = @"Company";
+                cell.detailTextLabel.text = ((Bikes*)self.transport).company;
+                break;
+            case 1:
+                cell.textLabel.text = @"Model";
+                cell.detailTextLabel.text = ((Bikes*)self.transport).model;
+                break;
+            case 2:
+                cell.textLabel.text = @"Power";
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu",((Bikes*)self.transport).power.integerValue];
+                break;
+            case 3:
+                cell.textLabel.text = @"Type";
+                cell.detailTextLabel.text = ((Bikes*)self.transport).type;
+                break;
+                
+                
+                
+            default:
+                break;
+        }
+    }
+    
+    
+    
+    if ([self.transport isKindOfClass:[Trucks class]]) {
+        switch (indexPath.row) {
+            case 0:
+                cell.textLabel.text = @"Company";
+                cell.detailTextLabel.text = ((Trucks*)self.transport).company;
+                break;
+            case 1:
+                cell.textLabel.text = @"Model";
+                cell.detailTextLabel.text = ((Trucks*)self.transport).model;
+                break;
+            case 2:
+                cell.textLabel.text = @"Power";
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu",((Trucks*)self.transport).power.integerValue];
+                break;
+            case 3:
+                cell.textLabel.text = @"Sittings";
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", ((Trucks*)self.transport).sittings];
+                break;
+            case 4:
+                cell.textLabel.text = @"Capacity";
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", ((Trucks*)self.transport).capacity];
+                break;
+                
+                
+                
+            default:
+                break;
+        }
+    }
         return cell;
-//
+
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

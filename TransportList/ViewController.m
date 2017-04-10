@@ -22,22 +22,21 @@
             [containerProvider downloadDataFromNetwork:^{
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self fetchFromCoreData];
-                    [self.tableView reloadData];
                 });
             }];
         }
         
 }
 
-
 -(void) fetchFromCoreData {
     PersistentContainerProvider *containerProvider = [PersistentContainerProvider sharedInstance];
     NSManagedObjectContext *context = [containerProvider managedObjectContext];
     
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Transport"];
-    self.items = [context executeFetchRequest:request error:nil];
-    [self.tableView reloadData];
-    
+    [context performBlockAndWait:^{
+        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Transport"];
+        self.items = [context executeFetchRequest:request error:nil];
+        [self.tableView reloadData];
+    }];
 }
 
 
@@ -78,18 +77,13 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     DetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([DetailViewController class])];
     
     viewController.transport = ((Transport*)self.items[indexPath.row]);
     [self.navigationController pushViewController:viewController animated:YES];
-
-    
-    
-    
-    
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
 
 
 

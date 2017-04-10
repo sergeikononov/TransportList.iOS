@@ -45,9 +45,6 @@
     TransportAPIClient *client = [[TransportAPIClient alloc] initWithManagedObjectContext:[self managedObjectContext]];
     [client fetchAllTransportWithCompletionBlock:^(NSArray <Transport *> *allTransports, NSError *error) {
         NSLog(@"error = %@", error);
-        for (NSManagedObject *item in allTransports) {
-            [client.moc insertObject:item];
-        }
         [client.moc save:&error];
         if (dataBlock) {
             dataBlock();
@@ -57,9 +54,7 @@
 }
 
 - (NSManagedObjectContext *) managedObjectContext {
-    NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-    managedObjectContext.persistentStoreCoordinator = self.persistentContainer.viewContext.persistentStoreCoordinator;
-    return managedObjectContext;
+    return self.persistentContainer.viewContext;
 }
 
 
