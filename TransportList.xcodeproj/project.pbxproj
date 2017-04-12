@@ -15,6 +15,7 @@
 		20779D711E8BC933009EF37D /* Transport+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D671E8BC933009EF37D /* Transport+CoreDataProperties.m */; };
 		20779D721E8BC933009EF37D /* Cars+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D691E8BC933009EF37D /* Cars+CoreDataClass.m */; };
 		20779D731E8BC933009EF37D /* Cars+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D6B1E8BC933009EF37D /* Cars+CoreDataProperties.m */; };
+		856433121E9E28A300717E42 /* sample-881-globe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 856433111E9E28A300717E42 /* sample-881-globe@2x.png */; };
 		857FB4131E939B0D0054AD0F /* TransportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 857FB4121E939B0D0054AD0F /* TransportTableViewCell.m */; };
 		85AE35A41E8A778600A2901B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A31E8A778600A2901B /* main.m */; };
 		85AE35A71E8A778600A2901B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A61E8A778600A2901B /* AppDelegate.m */; };
@@ -51,6 +52,7 @@
 		20779D691E8BC933009EF37D /* Cars+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cars+CoreDataClass.m"; sourceTree = "<group>"; };
 		20779D6A1E8BC933009EF37D /* Cars+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cars+CoreDataProperties.h"; sourceTree = "<group>"; };
 		20779D6B1E8BC933009EF37D /* Cars+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cars+CoreDataProperties.m"; sourceTree = "<group>"; };
+		856433111E9E28A300717E42 /* sample-881-globe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-881-globe@2x.png"; sourceTree = "<group>"; };
 		857FB4111E939B0D0054AD0F /* TransportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportTableViewCell.h; sourceTree = "<group>"; };
 		857FB4121E939B0D0054AD0F /* TransportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportTableViewCell.m; sourceTree = "<group>"; };
 		85AE359F1E8A778600A2901B /* TransportList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransportList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 		85AE35A21E8A778600A2901B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				856433111E9E28A300717E42 /* sample-881-globe@2x.png */,
 				85D53E3C1E8CF05D00EE8475 /* TransportAPIClient.h */,
 				85D53E3D1E8CF05D00EE8475 /* TransportAPIClient.m */,
 				85AE363D1E8BADE100A2901B /* TransportList.xcdatamodeld */,
@@ -248,6 +251,7 @@
 			files = (
 				D7288CE21E97A61500B8888D /* Main.storyboard in Resources */,
 				85AE35AF1E8A778600A2901B /* Assets.xcassets in Resources */,
+				856433121E9E28A300717E42 /* sample-881-globe@2x.png in Resources */,
 				D7288CE01E97A60F00B8888D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

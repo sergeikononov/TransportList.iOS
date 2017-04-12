@@ -152,6 +152,11 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"About Transort";
+}
+
+
 /*
 #pragma mark - Navigation
 
