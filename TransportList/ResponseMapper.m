@@ -24,7 +24,7 @@
             car.company = carJSONRepresentation[@"company"];
             car.model = carJSONRepresentation[@"model"];
             car.steeringWheel = carJSONRepresentation[@"steeringWheel"];
-            car.sittings = carJSONRepresentation[@"sitting"];
+            car.sittings = carJSONRepresentation[@"sittings"];
             car.doors = carJSONRepresentation[@"doors"];
             car.power = carJSONRepresentation[@"power"];
             [allTransports addObject:car];
