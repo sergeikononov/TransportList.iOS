@@ -16,6 +16,8 @@
 		20779D721E8BC933009EF37D /* Cars+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D691E8BC933009EF37D /* Cars+CoreDataClass.m */; };
 		20779D731E8BC933009EF37D /* Cars+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 20779D6B1E8BC933009EF37D /* Cars+CoreDataProperties.m */; };
 		856433121E9E28A300717E42 /* sample-881-globe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 856433111E9E28A300717E42 /* sample-881-globe@2x.png */; };
+		8564331A1E9E2C8E00717E42 /* TransportListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 856433191E9E2C8E00717E42 /* TransportListTests.m */; };
+		856433361E9E50D000717E42 /* TransportListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 856433351E9E50D000717E42 /* TransportListUITests.m */; };
 		857FB4131E939B0D0054AD0F /* TransportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 857FB4121E939B0D0054AD0F /* TransportTableViewCell.m */; };
 		85AE35A41E8A778600A2901B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A31E8A778600A2901B /* main.m */; };
 		85AE35A71E8A778600A2901B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AE35A61E8A778600A2901B /* AppDelegate.m */; };
@@ -35,6 +37,23 @@
 		D7288CE81E97A63300B8888D /* StoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7288CE61E97A63300B8888D /* StoresViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8564331C1E9E2C8E00717E42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85AE35971E8A778600A2901B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85AE359E1E8A778600A2901B;
+			remoteInfo = TransportList;
+		};
+		856433381E9E50D000717E42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85AE35971E8A778600A2901B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85AE359E1E8A778600A2901B;
+			remoteInfo = TransportList;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		20779D5C1E8BC933009EF37D /* Trucks+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Trucks+CoreDataClass.h"; sourceTree = "<group>"; };
 		20779D5D1E8BC933009EF37D /* Trucks+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Trucks+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -53,6 +72,12 @@
 		20779D6A1E8BC933009EF37D /* Cars+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cars+CoreDataProperties.h"; sourceTree = "<group>"; };
 		20779D6B1E8BC933009EF37D /* Cars+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cars+CoreDataProperties.m"; sourceTree = "<group>"; };
 		856433111E9E28A300717E42 /* sample-881-globe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-881-globe@2x.png"; sourceTree = "<group>"; };
+		856433171E9E2C8E00717E42 /* TransportListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransportListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		856433191E9E2C8E00717E42 /* TransportListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransportListTests.m; sourceTree = "<group>"; };
+		8564331B1E9E2C8E00717E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		856433331E9E50CF00717E42 /* TransportListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransportListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		856433351E9E50D000717E42 /* TransportListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransportListUITests.m; sourceTree = "<group>"; };
+		856433371E9E50D000717E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		857FB4111E939B0D0054AD0F /* TransportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportTableViewCell.h; sourceTree = "<group>"; };
 		857FB4121E939B0D0054AD0F /* TransportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportTableViewCell.m; sourceTree = "<group>"; };
 		85AE359F1E8A778600A2901B /* TransportList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransportList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +111,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		856433141E9E2C8E00717E42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		856433301E9E50CF00717E42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85AE359C1E8A778600A2901B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,10 +136,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		856433181E9E2C8E00717E42 /* TransportListTests */ = {
+			isa = PBXGroup;
+			children = (
+				856433191E9E2C8E00717E42 /* TransportListTests.m */,
+				8564331B1E9E2C8E00717E42 /* Info.plist */,
+			);
+			path = TransportListTests;
+			sourceTree = "<group>";
+		};
+		856433341E9E50CF00717E42 /* TransportListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				856433351E9E50D000717E42 /* TransportListUITests.m */,
+				856433371E9E50D000717E42 /* Info.plist */,
+			);
+			path = TransportListUITests;
+			sourceTree = "<group>";
+		};
 		85AE35961E8A778600A2901B = {
 			isa = PBXGroup;
 			children = (
 				85AE35A11E8A778600A2901B /* TransportList */,
+				856433181E9E2C8E00717E42 /* TransportListTests */,
+				856433341E9E50CF00717E42 /* TransportListUITests */,
 				85AE35A01E8A778600A2901B /* Products */,
 				85AE36311E8A823300A2901B /* Frameworks */,
 			);
@@ -110,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				85AE359F1E8A778600A2901B /* TransportList.app */,
+				856433171E9E2C8E00717E42 /* TransportListTests.xctest */,
+				856433331E9E50CF00717E42 /* TransportListUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +254,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		856433161E9E2C8E00717E42 /* TransportListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8564331E1E9E2C8E00717E42 /* Build configuration list for PBXNativeTarget "TransportListTests" */;
+			buildPhases = (
+				856433131E9E2C8E00717E42 /* Sources */,
+				856433141E9E2C8E00717E42 /* Frameworks */,
+				856433151E9E2C8E00717E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8564331D1E9E2C8E00717E42 /* PBXTargetDependency */,
+			);
+			name = TransportListTests;
+			productName = TransportListTests;
+			productReference = 856433171E9E2C8E00717E42 /* TransportListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		856433321E9E50CF00717E42 /* TransportListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8564333A1E9E50D000717E42 /* Build configuration list for PBXNativeTarget "TransportListUITests" */;
+			buildPhases = (
+				8564332F1E9E50CF00717E42 /* Sources */,
+				856433301E9E50CF00717E42 /* Frameworks */,
+				856433311E9E50CF00717E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				856433391E9E50D000717E42 /* PBXTargetDependency */,
+			);
+			name = TransportListUITests;
+			productName = TransportListUITests;
+			productReference = 856433331E9E50CF00717E42 /* TransportListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		85AE359E1E8A778600A2901B /* TransportList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85AE35B61E8A778600A2901B /* Build configuration list for PBXNativeTarget "TransportList" */;
@@ -219,6 +316,18 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Сергей";
 				TargetAttributes = {
+					856433161E9E2C8E00717E42 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = HAZAV255F2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 85AE359E1E8A778600A2901B;
+					};
+					856433321E9E50CF00717E42 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = HAZAV255F2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 85AE359E1E8A778600A2901B;
+					};
 					85AE359E1E8A778600A2901B = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = HAZAV255F2;
@@ -240,11 +349,27 @@
 			projectRoot = "";
 			targets = (
 				85AE359E1E8A778600A2901B /* TransportList */,
+				856433161E9E2C8E00717E42 /* TransportListTests */,
+				856433321E9E50CF00717E42 /* TransportListUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		856433151E9E2C8E00717E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		856433311E9E50CF00717E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85AE359D1E8A778600A2901B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +384,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		856433131E9E2C8E00717E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8564331A1E9E2C8E00717E42 /* TransportListTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8564332F1E9E50CF00717E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				856433361E9E50D000717E42 /* TransportListUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85AE359B1E8A778600A2901B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,7 +430,74 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8564331D1E9E2C8E00717E42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85AE359E1E8A778600A2901B /* TransportList */;
+			targetProxy = 8564331C1E9E2C8E00717E42 /* PBXContainerItemProxy */;
+		};
+		856433391E9E50D000717E42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85AE359E1E8A778600A2901B /* TransportList */;
+			targetProxy = 856433381E9E50D000717E42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8564331F1E9E2C8E00717E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HAZAV255F2;
+				INFOPLIST_FILE = TransportListTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kononov.TransportListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransportList.app/TransportList";
+			};
+			name = Debug;
+		};
+		856433201E9E2C8E00717E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HAZAV255F2;
+				INFOPLIST_FILE = TransportListTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kononov.TransportListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransportList.app/TransportList";
+			};
+			name = Release;
+		};
+		8564333B1E9E50D000717E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = HAZAV255F2;
+				INFOPLIST_FILE = TransportListUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kononov.TransportListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TransportList;
+			};
+			name = Debug;
+		};
+		8564333C1E9E50D000717E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = HAZAV255F2;
+				INFOPLIST_FILE = TransportListUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kononov.TransportListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TransportList;
+			};
+			name = Release;
+		};
 		85AE35B41E8A778600A2901B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -407,6 +615,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8564331E1E9E2C8E00717E42 /* Build configuration list for PBXNativeTarget "TransportListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8564331F1E9E2C8E00717E42 /* Debug */,
+				856433201E9E2C8E00717E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8564333A1E9E50D000717E42 /* Build configuration list for PBXNativeTarget "TransportListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8564333B1E9E50D000717E42 /* Debug */,
+				8564333C1E9E50D000717E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		85AE359A1E8A778600A2901B /* Build configuration list for PBXProject "TransportList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
