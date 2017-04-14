@@ -12,8 +12,10 @@
 #import "TransportAPIClient.h"
 #import "ResponseDeserializer.h"
 #import "RequestProvider.h"
+#import "ResponseMapper.h"
 
 
+@class ViewController;
 
 @interface TransportListTests : XCTestCase
 
@@ -22,6 +24,7 @@
 @property (strong, nonatomic) NSURLSession *session;
 @property (strong, nonatomic) ResponseDeserializer *responseDeserializer;
 @property (strong,nonatomic) NSArray *items;
+@property (strong, nonatomic) NSManagedObjectContext *moc;
 
 @end
 
@@ -64,6 +67,37 @@
     XCTAssertNotNil([[RequestProvider alloc] allTransportRequest]);
 
 }
+
+
+-(void)testResponseDeserializer {
+    NSData *data = [[NSData alloc] init];
+    XCTAssertNil([[ResponseDeserializer alloc] deserializeResponseData:data]);
+    
+}
+
+-(void)testResponseMapper {
+    NSDictionary *dictionary = [[NSDictionary alloc] init];
+    XCTAssertNotNil([[ResponseMapper alloc] mapAllTransportFromJSON:dictionary inManagedObjectContext:_moc]);
+}
+
+-(void)testFetchFromCoreData {
+    ViewController *vc = [[ViewController alloc] init];
+    PersistentContainerProvider *containerProvider = [PersistentContainerProvider sharedInstance];
+    [vc fetchFromCoreData];
+    if (self.items.count == 0){
+        [containerProvider downloadDataFromNetwork:^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [vc fetchFromCoreData];
+            });
+        }];
+    }
+    
+    XCTAssertNil(self.items);
+    
+}
+
+
+
 
 
 

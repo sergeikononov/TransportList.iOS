@@ -17,7 +17,7 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) NSMutableArray <Transport *> *dataArray;
 
-
+-(void) fetchFromCoreData;
     
 
 
